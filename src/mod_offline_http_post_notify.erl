@@ -58,7 +58,7 @@ mod_opt_type(post_url) ->
 mod_opt_type(confidential) ->
   fun (B) when is_boolean(B) -> B end.
 
-create_message({Action, Packet} = Acc) when (Packet#message.type == chat) and (Packet#message.body /= []) ->
+create_message({_Action, Packet} = Acc) when (Packet#message.type == chat) and (Packet#message.body /= []) ->
   [{text, _, Body}] = Packet#message.body,
   StanzaMessageId = maps:get(stanza_id, Packet#message.meta),
   post_offline_message(Packet#message.from, Packet#message.to, Body, Packet#message.id, StanzaMessageId),
