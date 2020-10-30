@@ -12,7 +12,7 @@ Installation
 1. cd /home/xxxxx/.ejabberd-module/sources/
 2. git clone https://github.com/codeliter/mod_offline_http_post_notify.git;
 3. start ejabberd
-4. bash /path-to-ejabberdctl/ejabberdctl module-install mod_offline_http_post_notify
+4. bash /path-to-ejabberdctl/ejabberdctl module_install mod_offline_http_post_notify
 5. restart ejabberd
 
 RPM Installation
